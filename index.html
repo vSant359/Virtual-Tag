@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <title>Virtual Tag</title>
+</head>
+<body>
+    <header class="flex items-center gap-4 rounded-lg bg-white p-6 shadow-md outline outline-black/5 dark:bg-gray-800">
+        <h1 class="text-6xl text-gray-700 dark:text-gray-400">Vt</h1>
+        <h3 class="text-gray-700 dark:text-gray-400">Virtual Tag</h3>
+    </header>
+    <br><br><br><br>
+
+    <div class="flex justify-center">
+        
+        <div class="flex flex-col w-96 gap-4 rounded-lg bg-white p-6 shadow-md outline outline-black/5 dark:bg-gray-800">
+            <h3>Remetente</h3>
+            <span class="">
+                <label for="cep_r">CEP: <br>
+                    <input type="text" name="cep_r" id="cep_r"  placeholder="00.000.000" class="bg-gray-300 rounded-lg"/>
+                    <a class="text-xs" href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank" rel="noopener noreferrer">Não sabe o cep?</a>
+                </label>
+            </span> 
+            <span class="">
+                <Label for="Nome_r">Nome: <br>
+                    <input type="text" name="nome_r" id="nome_r" placeholder="Nome do remetente" class="bg-gray-300 rounded-lg"/>
+                </Label>
+            </span>
+            <span class="flex flex-row">
+                <label for="logadouro_r">endereço: <br>
+                    <input type="text" name="logadouro_r" id="logadouro_r"  class="bg-gray-300 rounded-lg"/> 
+                </label>
+                <label for="numero_r"> numero: <br>
+                     <input type="text" name="numero_r" id="numero_r" class="bg-gray-300 rounded-lg w-[62px]"/>
+                </label>
+            </span>
+            <span class="flex flex-row">
+                <label for="complemento_r"> Complemento: <br>
+                    <input type="text" name="complemento_r" id="complemento_r" class="bg-gray-300 rounded-lg">
+                </label>
+                <label for="bairro_r"> Bairro: <br>
+                    <input type="text" name="bairro_r" id="bairro_r" class="bg-gray-300 rounded-lg">
+                </label>
+            </span>
+            <span class="flex flex-row">
+                <label for="cidade_r">Cidade: <br>
+                    <input type="text" name="cidade_r" id="cidade_r" class="bg-gray-300 rounded-lg">
+                </label>
+                <label for="uf_r">Uf: <br>
+                    <input type="text" name="uf_r" id="uf_r" class="bg-gray-300 rounded-lg w-[35px]">
+                </label>
+            </span>
+
+        </div>
+
+        
+        <div class="flex flex-col w-96 gap-4 rounded-lg bg-white p-6 shadow-md outline outline-black/5 dark:bg-gray-800">
+            <h3>Destinatário</h3>
+            <span class="">
+                <label for="cep_d">CEP: <br>
+                    <input type="text" name="cep_d" id="cep_d"  placeholder="00.000.000" class="bg-gray-300 rounded-lg"/>
+                    <a class="text-xs" href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank" rel="noopener noreferrer">Não sabe o cep?</a>
+                </label>
+            </span> 
+            <span class="">
+                <Label for="Nome_d">Nome: <br>
+                    <input type="text" name="nome_d" id="nome_d" placeholder="Nome do remetente" class="bg-gray-300 rounded-lg"/>
+                </Label>
+            </span>
+            <span class="flex flex-row">
+                <label for="logadouro_d">endereço: <br>
+                    <input type="text" name="logadouro_d" id="logadouro_d"  class="bg-gray-300 rounded-lg"/> 
+                </label>
+                <label for="numero_d"> numero: <br>
+                     <input type="text" name="numero_d" id="numero_d" class="bg-gray-300 rounded-lg w-[62px]"/>
+                </label>
+            </span>
+            <span class="flex flex-row">
+                <label for="complemento_d"> Complemento: <br>
+                    <input type="text" name="complemento_d" id="complemento_d" class="bg-gray-300 rounded-lg">
+                </label>
+                <label for="bairro_d"> Bairro: <br>
+                    <input type="text" name="bairro_d" id="bairro_d" class="bg-gray-300 rounded-lg">
+                </label>
+            </span>
+            <span class="flex flex-row">
+                <label for="cidade_d">Cidade: <br>
+                    <input type="text" name="cidade_d" id="cidade_d" class="bg-gray-300 rounded-lg">
+                </label>
+                <label for="uf_d">Uf: <br>
+                    <input type="text" name="uf_d" id="uf_d" class="bg-gray-300 rounded-lg w-[35px]">
+                </label>
+            </span>
+        </div>
+
+    </div>
+    <button class="bg-sky-500 hover:bg-sky-700" id="btn-gerar">Gerar</button>
+    <canvas id="barcode"></canvas>
+   
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+    <script src="index.js"></script>
+    <script src="pdfGenerator.js"></script>
+    <script src="https://unpkg.com/inputmask@5.0.8/dist/inputmask.min.js"></script>
+
+
+
+        <script>
+            Inputmask({ "mask": "99999-999" }).mask(document.getElementById('cep_r'));
+            Inputmask({ "mask": "99999-999" }).mask(document.getElementById('cep_d'));
+        </script>
+</body>
+</html>
