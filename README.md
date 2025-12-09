@@ -43,10 +43,12 @@ O VT — Virtual Tag gera etiquetas de envio para encomendas em geral, otimizand
 
 ## 📌 Status
 O sistema está **pronto para uso** e totalmente funcional.  
-A UI ainda será aprimorada, mas já está perfeitamente utilizável.
 
-Pretendo fazer deploy no **Render** em breve.  
-Por enquanto, o acesso é possível apenas por clonagem do repositório — mas recomendo aguardar a versão final no navegador.
+
+## 🌐 Acesse o Sistema Online
+
+➡️ **[https://vsant359.github.io/Virtual-Tag/](https://vsant359.github.io/Virtual-Tag/)**
+
 
 ---
 
@@ -102,11 +104,11 @@ VT — Virtual Tag generates shipping labels for general parcels, optimizing pre
 ## 📌 Status
 The system is **ready for use** and fully functional.
 
-The UI will still be improved, but it is already fully usable..
 
-I intend to deploy it to **Render** soon.
+## 🌐 Access the Online System
 
-For now, access is only possible by cloning the repository — but I recommend waiting for the final version in the browser.
+➡️ **[https://vsant359.github.io/Virtual-Tag/](https://vsant359.github.io/Virtual-Tag/)**
+
 
 
 ---
